@@ -1,5 +1,6 @@
 import 'package:exercise_get/src/pages/next.dart';
 import 'package:exercise_get/src/pages/normal/first.dart';
+import 'package:exercise_get/src/state/simple_state_management_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -44,7 +45,14 @@ class Home extends StatelessWidget {
                     // Get.toNamed("/user/28357");
                     Get.toNamed("/user/28357?name=개남&age=22");
                   },
-                )
+                ),
+                ElevatedButton(
+                  child: Text("단순 상태 관리"),
+                  onPressed: () {
+                    // Get.toNamed("/user/28357");
+                    Get.to(SimpleStateManagePage());
+                  },
+                ),
               ],
             ))
     );
