@@ -5,6 +5,15 @@ import 'package:provider/provider.dart';
 class WithProvider extends StatelessWidget {
   const WithProvider({Key? key}) : super(key: key);
 
+  // Widget _button() {
+  //   return ElevatedButton(
+  //    child: Text("+", style: TextStyle(fontSize: 30)),
+  //    onPressed: () {
+  //      Provider.of<CountControllerWithProvider>(context, listen: false).increase();
+  //    }
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -28,10 +37,12 @@ class WithProvider extends StatelessWidget {
                 // listen false 하게 되면 상단 Consumer 만 빌드 된다.
                 Provider.of<CountControllerWithProvider>(context, listen: false).increase();
               },
-              child: Text("+")
+              child: Text("+", style: TextStyle(fontSize: 30)),
           )
         ]
       )
     );
   }
 }
+
+

@@ -1,7 +1,9 @@
+import 'package:exercise_get/src/controller/count_controller_with_getx.dart';
 import 'package:exercise_get/src/controller/count_controller_with_provider.dart';
 import 'package:exercise_get/src/state/with_getx.dart';
 import 'package:exercise_get/src/state/with_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class SimpleStateManagePage extends StatelessWidget {
@@ -9,6 +11,7 @@ class SimpleStateManagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(CountControllerWithGetX());
     return Scaffold(
         appBar: AppBar(
           title: Text('단순상태관리'),
